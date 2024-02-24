@@ -22,7 +22,7 @@ class ReportController extends Controller
                 ]
               )->get();
         } else {
-            $transactions = Transaction::where('user_id', auth()->user()->id)->orderBy('id', 'DESC')->get();
+            $transactions = Transaction::where('user_id', auth()->user()->id)->whereDate('created_at', date('Y-m-d'))->orderBy('id', 'DESC')->get();
         }
         
         return view('kasir.report.index', compact('transactions'));

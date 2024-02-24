@@ -7,6 +7,7 @@
         <div class="card-header justify-content-between d-flex d-inline">
           <h4 class="card-title"> Laporan Transaksi</h4>
         </div>
+        <i style="color: grey; font-size:90%" class="ml-3">Secara default menampilkan penjualan hari ini, silahkan filter tanggal untuk melakukan pencarian</i>
         <div class="card-body">
           <form action="{{ route('kasir.report.index') }}">
             
